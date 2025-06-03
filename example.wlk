@@ -33,20 +33,20 @@ class Plagas {
 class Cucharachas inherits Plagas {
   var property peso
   method pesoPromedio() = peso / poblacion 
-  method nivelDeDaño() = poblacion / 2
-  override method transmiteEnfermedades() = self.transmiteEnfermedades() && self.pesoPromedio() >= 10
+  method nivelDeDanio() = poblacion / 2
+  override method transmiteEnfermedades() = super() && self.pesoPromedio() >= 10
 
 }
 
 class Pulgas inherits Plagas {
-  method nivelDeDaño() = poblacion * 2
+  method nivelDeDanio() = poblacion * 2
 }
 
 class Garrapatas inherits Plagas {
-  method nivelDeDaño() = poblacion * 2
+  method nivelDeDanio() = poblacion * 2
 }
 
 class Mosquitos inherits Plagas {
-  method nivelDeDaño() = poblacion 
-  override method transmiteEnfermedades() = self.transmiteEnfermedades() && poblacion % 3 == 0
+  method nivelDeDanio() = poblacion 
+  override method transmiteEnfermedades() = super() && poblacion % 3 == 0
 }
